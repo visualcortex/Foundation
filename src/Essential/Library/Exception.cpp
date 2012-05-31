@@ -11,8 +11,8 @@
 
 #include "Precompiled.hpp"
 
-#include <Foundation/Essential/Exception.hpp>
-#include <Foundation/Essential/Results.hpp>
+#include <Dream/Foundation/Essential/Exception.hpp>
+#include <Dream/Foundation/Essential/Results.hpp>
 
 namespace Dream
 {

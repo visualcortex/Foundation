@@ -4,9 +4,9 @@ project(${PROJECT})
 file(GLOB SOURCES ./Library/*.cpp)
 
 file(GLOB LIB_HEADERS ./Library/*.hpp)
-file(GLOB SDK_HEADERS ../../inc/Foundation/Essential/*.hpp)
+file(GLOB SDK_HEADERS ../../inc/Dream/Foundation/Essential/*.hpp)
 
-set(HEADERS ${LIB_HEADERS} ${SDK_HEADERS} ../../inc/Foundation/Essential.hpp)
+set(HEADERS ${LIB_HEADERS} ${SDK_HEADERS} ../../inc/Dream/Foundation/Essential.hpp)
 
 if(MSVC)
     foreach(src_file ${SOURCES})
