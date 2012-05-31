@@ -11,19 +11,26 @@
 
 #pragma once
 
-#include <Dream/Foundation/Essential/BaseTypes.hpp>
-#include <Dream/Foundation/Essential/String.hpp>
-
-#include <list>
-#include <map>
-#include <memory>
-#include <tuple>
-#include <vector>
+#include <Dream/Foundation/Essential.hpp>
 
 namespace Dream
 {
-	typedef uint32 result_t;
+	namespace Logging
+	{	
+		enum class Level : uint32
+		{
+			All,
+			Trace,
+			Info,
+			Warning,
+			Error,
+			None,
+			Progress
+		};
+	}
 
-	typedef std::vector<byte> ByteArray;
-	typedef std::vector<string> StringArray;
+	namespace Convert
+	{
+		string ToString(__in Logging::Level value);
+	}
 }

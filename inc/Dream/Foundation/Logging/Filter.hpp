@@ -11,19 +11,17 @@
 
 #pragma once
 
-#include <Dream/Foundation/Essential/BaseTypes.hpp>
-#include <Dream/Foundation/Essential/String.hpp>
-
-#include <list>
-#include <map>
-#include <memory>
-#include <tuple>
-#include <vector>
+#include <Dream/Foundation/Logging/Record.hpp>
 
 namespace Dream
 {
-	typedef uint32 result_t;
-
-	typedef std::vector<byte> ByteArray;
-	typedef std::vector<string> StringArray;
+	namespace Logging
+	{
+		/** Provides support for formatting log records
+		 */
+		interface IFilter : public IAbstract
+		{
+			virtual bool isLogRecordLoggable(__in const Record &record) = 0;
+		};
+	}
 }

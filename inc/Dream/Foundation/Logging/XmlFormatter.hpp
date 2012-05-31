@@ -11,19 +11,16 @@
 
 #pragma once
 
-#include <Dream/Foundation/Essential/BaseTypes.hpp>
-#include <Dream/Foundation/Essential/String.hpp>
-
-#include <list>
-#include <map>
-#include <memory>
-#include <tuple>
-#include <vector>
+#include <Dream/Foundation/Logging/Formatter.hpp>
 
 namespace Dream
 {
-	typedef uint32 result_t;
-
-	typedef std::vector<byte> ByteArray;
-	typedef std::vector<string> StringArray;
+	namespace Logging
+	{
+		class XmlFormatter : public IFormatter
+		{
+			public:
+				virtual string formatLogRecord(__in const Record &record);
+		};
+	}
 }
