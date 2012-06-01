@@ -34,3 +34,18 @@ set(SOURCES ${SOURCES} ${PLATFORM_SOURCES})
 
 add_library(${PROJECT} ${HEADERS} ${SOURCES})
 install(TARGETS Dream.Foundation.Cryptography DESTINATION ${CMAKE_INSTALL_PREFIX})
+
+#------------------------------------------------------------------------------
+# TEST
+#------------------------------------------------------------------------------
+
+set(TEST ${PROJECT}.Test)
+
+file(GLOB TEST_SOURCES ./Tests/*.cpp)
+file(GLOB TEST_HEADERS ./Tests/*.hpp)
+
+add_executable(${TEST} ${TEST_SOURCES} ${TEST_HEADERS})
+target_link_libraries(${TEST} ${PROJECT} ${Boost_LIBRARIES})
+
+enable_testing()
+add_test(${TEST} ${TEST})
