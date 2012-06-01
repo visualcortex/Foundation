@@ -94,8 +94,8 @@ namespace Dream
 		{
 			preconditions
 			{
-				assert(listener != nullptr);
-				assert(!path.empty());
+				DREAM_ASSERT(listener != nullptr);
+				DREAM_ASSERT(!path.empty());
 			}
 
 			ScanParams params;

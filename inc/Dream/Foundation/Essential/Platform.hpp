@@ -60,7 +60,7 @@
 #define postconditions
 
 #if defined(DREAM_PLATFORM_DEBUG)
-#	define DREAM_NODEFAULT assert(0)
+#	define DREAM_NODEFAULT DREAM_ASSERT(0)
 #else
 #	define DREAM_NODEFAULT __assume(0)
 #endif
